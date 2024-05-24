@@ -95,6 +95,7 @@ def main():
     n_agents = 3
     exp = "debug"
     seed = 1
+    max_episode_steps = 25
 
     args = [
         '--env_name', env,
@@ -103,7 +104,7 @@ def main():
         '--num_agents', str(n_agents),
         '--num_landmarks', str(num_landmarks),
         '--seed', str(seed),
-        '--episode_length', '25',
+        '--episode_length', str(max_episode_steps),
         '--use_soft_update',
         '--lr', '7e-4',
         '--hard_update_interval_episode', '200',
@@ -119,7 +120,6 @@ def main():
     env.reset()
     test_env.reset()
 
-    max_episode_steps = 100
     # assume action, observation space is homogeneous
     action_dim = env.action_space[0].shape[0]
     min_action = env.action_space[0].low[0]
@@ -152,6 +152,7 @@ def main():
 
         next_observations, rewards, dones, infos = env.step(actions)
         next_observations = np.array(next_observations)
+        observations = np.array(observations)
         rewards = np.array(rewards)
         dones = np.array(dones)
 
