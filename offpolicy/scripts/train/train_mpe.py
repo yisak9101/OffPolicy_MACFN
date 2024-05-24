@@ -193,7 +193,7 @@ if __name__ == "__main__":
     scenario = "simple_spread"
     num_landmarks = 3
     num_agents = 3
-    algo = "qmix"
+    algo = "maddpg"
     exp = "debug"
     seed_max = 1
 
