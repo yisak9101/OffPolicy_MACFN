@@ -1,4 +1,3 @@
-import sys
 from offpolicy.config import get_config
 from offpolicy.envs.mpe.MPE_Env import MPEEnv
 import copy
@@ -90,12 +89,42 @@ def parse_args(args, parser):
     return all_args
 
 def main():
-    max_episode_steps = 100
+    env = "MPE"
+    scenario = "simple_spread"
+    num_landmarks = 3
     n_agents = 3
-    obs_dim = 18
-    action_dim = 5
-    min_action = 0
-    max_action = 1
+    exp = "debug"
+    seed = 1
+
+    args = [
+        '--env_name', env,
+        '--experiment_name', exp,
+        '--scenario_name', scenario,
+        '--num_agents', str(n_agents),
+        '--num_landmarks', str(num_landmarks),
+        '--seed', str(seed),
+        '--episode_length', '25',
+        '--use_soft_update',
+        '--lr', '7e-4',
+        '--hard_update_interval_episode', '200',
+        '--num_env_steps', '10000000',
+        '--use_wandb',
+    ]
+
+    parser = get_config()
+    all_args = parse_args(args, parser)
+
+    env = MPEEnv(all_args)
+    test_env = MPEEnv(all_args)
+    env.reset()
+    test_env.reset()
+
+    max_episode_steps = 100
+    # assume action, observation space is homogeneous
+    action_dim = env.action_space[0].shape[0]
+    min_action = env.action_space[0].low[0]
+    max_action = env.action_space[0].high[0]
+    obs_dim = env.observation_space[0].shape[0]
     hidden_dim = 256
     policy = TrainRetrieval(obs_dim, action_dim)
     replay_buffer_size = 100000
@@ -112,27 +141,25 @@ def main():
     episode_timesteps = 0
     episode_num = 0
 
-    parser = get_config()
-    all_args = parse_args([], parser)
-
-    env = MPEEnv(all_args)
-    test_env = MPEEnv(all_args)
-
-    env.reset()
-    test_env.reset()
 
     observations, done = env.reset(), False
 
     while frame_idx < max_frames:
 
         episode_timesteps += 1
-        actions = {agent: env.action_space(agent).sample() for agent in env.agents}
 
-        next_observations, rewards, dones, truncations, infos = env.step(actions)
-        reward = sum(rewards.values()) / len(rewards.values())
-        done_bool = (True in dones.values() or True in truncations.values()) if episode_timesteps < max_episode_steps else 1
-        replay_buffer.add(np.array(list(observations.values())), np.array(list(actions.values())),
-                          np.array(list(next_observations.values())), reward, done_bool)
+        actions = np.array([np.random.uniform(low=-1., high=1., size=(2)) for _ in np.arange(n_agents)])
+
+        next_observations, rewards, dones, infos = env.step(actions)
+        next_observations = np.array(next_observations)
+        rewards = np.array(rewards)
+        dones = np.array(dones)
+
+        reward = np.sum(rewards) / rewards.shape[0]
+        done_bool = (
+                    True in dones) if episode_timesteps < max_episode_steps else 1
+        replay_buffer.add(observations, actions,
+                          next_observations, reward, done_bool)
 
         observations = next_observations
         episode_reward += reward
@@ -144,7 +171,7 @@ def main():
             torch.save(policy.retrieval.state_dict(), 'retrieval_spread.pkl')
 
         if done_bool:
-            (observations, _), done = env.reset(), False
+            observations, done = env.reset(), False
             episode_reward = 0
             episode_timesteps = 0
             episode_num += 1
@@ -154,4 +181,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
