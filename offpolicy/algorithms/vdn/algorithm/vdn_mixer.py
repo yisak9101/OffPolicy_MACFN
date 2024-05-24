@@ -33,6 +33,7 @@ class VDNMixer(nn.Module):
 
         :return Q_tot: (torch.Tensor) computed Q_tot values
         """
+
         batch_size = agent_q_inps.size(1)
         if type(agent_q_inps) == np.ndarray:
             agent_q_inps = torch.FloatTensor(agent_q_inps)
