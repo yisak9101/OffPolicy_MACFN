@@ -86,32 +86,32 @@ def main(args):
     if not run_dir.exists():
         os.makedirs(str(run_dir))
 
-    if all_args.use_wandb:
-        # init wandb
-        run = wandb.init(config=all_args,
-                         project=all_args.env_name,
-                         entity=all_args.user_name,
-                         notes=socket.gethostname(),
-                         name=str(all_args.algorithm_name) + "_" +
-                         str(all_args.experiment_name) +
-                         "_seed" + str(all_args.seed),
-                         group=all_args.scenario_name,
-                         dir=str(run_dir),
-                         job_type="training",
-                         reinit=True)
-    else:
-        if not run_dir.exists():
-            curr_run = 'run1'
-        else:
-            exst_run_nums = [int(str(folder.name).split('run')[
-                                 1]) for folder in run_dir.iterdir() if str(folder.name).startswith('run')]
-            if len(exst_run_nums) == 0:
-                curr_run = 'run1'
-            else:
-                curr_run = 'run%i' % (max(exst_run_nums) + 1)
-        run_dir = run_dir / curr_run
-        if not run_dir.exists():
-            os.makedirs(str(run_dir))
+    # if all_args.use_wandb:
+    #     # init wandb
+    #     run = wandb.init(config=all_args,
+    #                      project=all_args.env_name,
+    #                      entity=all_args.user_name,
+    #                      notes=socket.gethostname(),
+    #                      name=str(all_args.algorithm_name) + "_" +
+    #                      str(all_args.experiment_name) +
+    #                      "_seed" + str(all_args.seed),
+    #                      group=all_args.scenario_name,
+    #                      dir=str(run_dir),
+    #                      job_type="training",
+    #                      reinit=True)
+    # else:
+    #     if not run_dir.exists():
+    #         curr_run = 'run1'
+    #     else:
+    #         exst_run_nums = [int(str(folder.name).split('run')[
+    #                              1]) for folder in run_dir.iterdir() if str(folder.name).startswith('run')]
+    #         if len(exst_run_nums) == 0:
+    #             curr_run = 'run1'
+    #         else:
+    #             curr_run = 'run%i' % (max(exst_run_nums) + 1)
+    #     run_dir = run_dir / curr_run
+    #     if not run_dir.exists():
+    #         os.makedirs(str(run_dir))
 
     setproctitle.setproctitle(str(all_args.algorithm_name) + "-" + str(
         all_args.env_name) + "-" + str(all_args.experiment_name) + "@" + str(all_args.user_name))
@@ -189,32 +189,4 @@ def main(args):
 
 
 if __name__ == "__main__":
-    env = "MPE"
-    scenario = "simple_spread"
-    num_landmarks = 3
-    num_agents = 3
-    algo = "vdn"
-    exp = "debug"
-    seed_max = 1
-
-    print(f"env is {env}, scenario is {scenario}, algo is {algo}, exp is {exp}, max seed is {seed_max}")
-
-    for seed in range(1, seed_max + 1):
-        print(f"seed is {seed}:")
-        args = [
-            '--env_name', env,
-            '--algorithm_name', algo,
-            '--experiment_name', exp,
-            '--scenario_name', scenario,
-            '--num_agents', str(num_agents),
-            '--num_landmarks', str(num_landmarks),
-            '--seed', str(seed),
-            '--episode_length', '25',
-            '--use_soft_update',
-            '--lr', '7e-4',
-            '--hard_update_interval_episode', '200',
-            '--num_env_steps', '10000000',
-            '--use_wandb'
-        ]
-        main(args)
-        print("training is done!")
+    main(sys.argv[1:])
