@@ -208,7 +208,6 @@ class CFN(object):
         network_loss = F.mse_loss(inflow, outflow, reduction='none')
         network_loss = torch.mean(torch.sum(network_loss, dim=1))
         print(network_loss)
-        wandb.log({'Network_loss': network_loss})
         self.network_optimizer.zero_grad()
         network_loss.backward()
         self.network_optimizer.step()

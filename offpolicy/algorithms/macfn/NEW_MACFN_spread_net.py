@@ -188,7 +188,7 @@ class CFN(object):
         self.uniform_action = torch.Tensor(self.uniform_action).to(device)
         return self.uniform_action
 
-    def train(self, replay_buffer, frame_idx, batch_size=200, max_episode_steps=25 ,sample_flow_num=100):
+    def train(self, replay_buffer, frame_idx, num_step, batch_size=200, max_episode_steps=25 ,sample_flow_num=100):
         # Sample replay buffer
         obs, action, reward, next_obs, not_done = replay_buffer.sample(batch_size)
         obs = torch.FloatTensor(obs).to(device)
@@ -252,8 +252,8 @@ class CFN(object):
 
         network_loss = F.mse_loss(inflow, outflow, reduction='none')
         network_loss = torch.mean(torch.sum(network_loss, dim=1))
-        print(network_loss)
-        wandb.log({'Network_loss': network_loss})
+        #print(network_loss)
+        wandb.log({'Network_loss': network_loss}, step = num_step)
         self.network_optimizer.zero_grad()
         network_loss.backward()
         self.network_optimizer.step()
@@ -261,8 +261,8 @@ class CFN(object):
         if frame_idx % 5 == 0:
             pre_state = self.retrieval(next_obs, action)
             retrieval_loss = F.mse_loss(pre_state, obs)
-            print(retrieval_loss)
-            wandb.log({'Retrieva_loss': retrieval_loss})
+            #print(retrieval_loss)
+            wandb.log({'Retrieval_loss': retrieval_loss},step = num_step)
 
             # Optimize the network
             self.retrieval_optimizer.zero_grad()
@@ -342,8 +342,9 @@ def main():
     sample_flow_num = 99
     repeat_episode_num = 5
     sample_episode_num = 1000
-    num_env_steps = 10000000
+    num_env_steps = 1000000
     num_step = 0
+    log_interval = 100
     #writer = SummaryWriter(log_dir="runs/MACFN_Spread_" + now_time)
 
     policy = CFN(n_agents, obs_dim, action_dim, hidden_dim, min_action, max_action, uniform_action_size)
@@ -381,21 +382,31 @@ def main():
             observations = next_observations
             episode_reward += reward
 
+
+
             if done:
                 frame_idx += 1
                 print(frame_idx)
                 replay_buffer.push(obs_buf, action_buf, reward_buf, next_obs_buf, not_done_buf)
                 break
 
-            if frame_idx >= start_timesteps :
-                policy.train(replay_buffer, frame_idx, batch_size, max_episode_steps, sample_flow_num)
+            if frame_idx >= start_timesteps and step % 25 == 0 :
+                policy.train(replay_buffer, frame_idx, num_step,batch_size, max_episode_steps, sample_flow_num)
 
         episode_rewards.append(episode_reward)
         print(episode_reward)
+        print(len(episode_rewards))
 
-        if frame_idx >= start_timesteps:
-            wandb.log({"MACFN_Spread_episode_reward": episode_reward})
+        #if frame_idx >= start_timesteps:
+            #wandb.log({"MACFN_Spread_episode_reward": episode_reward},step = 5)
 
+        if len(episode_rewards) % log_interval == 0:
+            avg_reward = np.mean(episode_rewards[-log_interval:])
+            wandb.log({"average_episode_rewards": avg_reward},step = num_step)
+            print(f"Episode: {len(episode_rewards)}, Average Reward: {avg_reward}")
+            episode_rewards = []
+
+       # print(f"Episode Reward: {episode_reward}")
         # if frame_idx > start_timesteps and frame_idx % 25 == 0:
         #     print(frame_idx)
         #     test_epoch += 1
