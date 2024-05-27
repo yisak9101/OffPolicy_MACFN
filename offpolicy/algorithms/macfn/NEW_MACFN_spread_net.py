@@ -5,7 +5,7 @@ import random
 import numpy as np
 import torch
 import torch.nn as nn
-
+import wandb
 import torch.nn.functional as F
 import pickle
 from torch.distributions import Categorical
@@ -91,6 +91,36 @@ class Network(nn.Module):
         q1 = F.softplus(self.l3(q1))
         return q1
 
+class CombineNetwork(nn.Module):
+    def __init__(self, batch_size, max_episode_steps, n_agents, sample_flow_num):
+        super(CombineNetwork, self).__init__()
+        self.batch_size = batch_size
+        self.max_episode_steps = max_episode_steps
+        self.n_agents = n_agents
+        self.sample_flow_num = sample_flow_num
+
+        # Define a linear layer to process each agent's data independently
+        self.fc1 = nn.Linear(n_agents * sample_flow_num, 256)  # Combine the features of the 3 agents
+        self.fc2 = nn.Linear(256, 1)
+
+    def forward(self, x):
+        batch_size = x.size(0)
+        seq_len = x.size(1)
+
+        # Reshape the input tensor to (batch_size * max_episode_steps, n_agents * sample_flow_num)
+        x = x.view(batch_size * seq_len, -1)
+
+        # Apply the first linear layer
+        x = torch.relu(self.fc1(x))
+
+        # Apply the second linear layer
+        x = self.fc2(x)
+
+        # Reshape to the desired output shape (batch_size, max_episode_steps)
+        x = x.view(batch_size, seq_len)
+
+        return x
+
 
 class CFN(object):
     def __init__(
@@ -106,7 +136,10 @@ class CFN(object):
             tau=0.005,
             policy_noise=0.2,
             noise_clip=0.5,
-            policy_freq=2
+            policy_freq=2,
+            batch_size = 200,
+            max_episode_steps = 25,
+            sample_flow_num = 100
     ):
 
         self.network = Network(obs_dim, action_dim, hidden_dim).to(device)
@@ -114,6 +147,8 @@ class CFN(object):
         self.retrieval = Retrieval(obs_dim, action_dim).to(device)
         self.retrieval_optimizer = torch.optim.Adam(self.retrieval.parameters(), lr=3e-5)
 
+        self.CombineNetwork = CombineNetwork(batch_size, max_episode_steps, n_agents,sample_flow_num).to(device)
+        self.CombineNetwork_optimizer = torch.optim.Adam(self.CombineNetwork.parameters(), lr=3e-4)
         self.n_agents = n_agents
         self.discount = discount
         self.tau = tau
@@ -135,6 +170,7 @@ class CFN(object):
     def select_action(self, obs, is_max):
         sample_action = np.random.uniform(low=self.min_action, high=self.max_action,
                                           size=(self.uniform_action_size, self.action_dim))
+
         with torch.no_grad():
             sample_action = torch.Tensor(sample_action).to(device)
             state = torch.FloatTensor(obs.reshape(1, -1)).repeat(self.uniform_action_size, 1).to(device)
@@ -152,7 +188,7 @@ class CFN(object):
         self.uniform_action = torch.Tensor(self.uniform_action).to(device)
         return self.uniform_action
 
-    def train(self, replay_buffer, frame_idx, batch_size=256, max_episode_steps=50, sample_flow_num=100):
+    def train(self, replay_buffer, frame_idx, batch_size=200, max_episode_steps=25 ,sample_flow_num=100):
         # Sample replay buffer
         obs, action, reward, next_obs, not_done = replay_buffer.sample(batch_size)
         obs = torch.FloatTensor(obs).to(device)
@@ -177,17 +213,27 @@ class CFN(object):
                 [uniform_action, action.reshape(batch_size, max_episode_steps, self.n_agents, -1, self.action_dim)],
                 -2)
 
-        epi = torch.ones((batch_size, max_episode_steps)).to(device)
+        # epi = torch.ones((batch_size, max_episode_steps)).to(device)
 
-        edge_inflow = self.network(inflow_state, uniform_action).reshape(batch_size, max_episode_steps, self.n_agents,
-                                                                         -1)
-        inflow = torch.log(
-            torch.sum(torch.exp(torch.log(edge_inflow)), -1).prod(dim=-1) + epi)  # (batch_size, max_episode_steps)
+        edge_inflow = self.network(inflow_state, uniform_action).reshape(batch_size, max_episode_steps, self.n_agents, -1)
+
+        inflow = self.CombineNetwork(edge_inflow)
+        #inflow = torch.log(
+        #    torch.sum(torch.exp(torch.log(edge_inflow)), -1).prod(dim=-1) + epi)  # (batch_size, max_episode_steps)
 
         with torch.no_grad():
             uniform_action = np.random.uniform(low=self.min_action, high=self.max_action,
                                                size=(batch_size, max_episode_steps, self.n_agents, sample_flow_num,
                                                      self.action_dim))
+
+            # uniform_action = np.random.uniform(
+            #     low=np.linspace(self.min_action, self.max_action, self.uniform_action_size, endpoint=False)[:, None],
+            #     high=np.linspace(self.min_action, self.max_action, self.uniform_action_size, endpoint=False)[:,
+            #          None] + (
+            #                  self.max_action - self.min_action) / self.uniform_action_size,
+            #     size=(batch_size, max_episode_steps, self.n_agents, sample_flow_num,
+            #           self.action_dim))
+
             uniform_action = torch.Tensor(uniform_action).to(device)
             outflow_obs = next_obs.repeat(1, 1, 1, (sample_flow_num + 1)).reshape(batch_size, max_episode_steps,
                                                                                   self.n_agents,
@@ -201,12 +247,13 @@ class CFN(object):
 
         edge_outflow = self.network(outflow_obs, uniform_action).reshape(batch_size, max_episode_steps, self.n_agents,
                                                                          -1)
-
-        outflow = torch.log(torch.sum(torch.exp(torch.log(edge_outflow)), -1).prod(dim=-1) + reward + epi)
+        outflow = self.CombineNetwork(edge_outflow) + reward
+        #outflow = torch.log(torch.sum(torch.exp(torch.log(edge_outflow)), -1).prod(dim=-1) + reward + epi)
 
         network_loss = F.mse_loss(inflow, outflow, reduction='none')
         network_loss = torch.mean(torch.sum(network_loss, dim=1))
         print(network_loss)
+        wandb.log({'Network_loss': network_loss})
         self.network_optimizer.zero_grad()
         network_loss.backward()
         self.network_optimizer.step()
@@ -215,6 +262,7 @@ class CFN(object):
             pre_state = self.retrieval(next_obs, action)
             retrieval_loss = F.mse_loss(pre_state, obs)
             print(retrieval_loss)
+            wandb.log({'Retrieva_loss': retrieval_loss})
 
             # Optimize the network
             self.retrieval_optimizer.zero_grad()
@@ -235,6 +283,10 @@ def parse_args(args, parser):
 
     return all_args
 
+def generate_random_idx():
+    idx = [1, 0, 0]
+    random.shuffle(idx)
+    return idx
 
 def main():
     env = "MPE"
@@ -244,6 +296,8 @@ def main():
     exp = "debug"
     seed = 1
     max_episode_steps = 25
+
+    wandb.init(project="MACFN_Project", name="MACFN_combnet_Spread_CmbNet"  + now_time)
 
     args = [
         '--env_name', env,
@@ -289,7 +343,7 @@ def main():
     repeat_episode_num = 5
     sample_episode_num = 1000
 
-    writer = SummaryWriter(log_dir="runs/MACFN_Spread_" + now_time)
+    #writer = SummaryWriter(log_dir="runs/MACFN_Spread_" + now_time)
 
     policy = CFN(n_agents, obs_dim, action_dim, hidden_dim, min_action, max_action, uniform_action_size)
     # policy.retrieval.load_state_dict(torch.load('retrieval_spread.pkl'))
@@ -337,6 +391,7 @@ def main():
 
         episode_rewards.append(episode_reward)
         print(episode_reward)
+        wandb.log({"MACFN_Spread_episode_reward": episode_reward})
 
         # if frame_idx > start_timesteps and frame_idx % 25 == 0:
         #     print(frame_idx)
