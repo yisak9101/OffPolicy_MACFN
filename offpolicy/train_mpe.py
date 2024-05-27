@@ -67,6 +67,7 @@ def parse_args(args, parser):
 def main(args):
     parser = get_config()
     all_args = parse_args(args, parser)
+    wandb.init(project="MACFN_Project", name="Qmix")
 
     # cuda and # threads
     if all_args.cuda and torch.cuda.is_available():
@@ -88,19 +89,10 @@ def main(args):
     if not run_dir.exists():
         os.makedirs(str(run_dir))
 
-    # if all_args.use_wandb:
-    #     # init wandb
-    #     run = wandb.init(config=all_args,
-    #                      project=all_args.env_name,
-    #                      entity=all_args.user_name,
-    #                      notes=socket.gethostname(),
-    #                      name=str(all_args.algorithm_name) + "_" +
-    #                      str(all_args.experiment_name) +
-    #                      "_seed" + str(all_args.seed),
-    #                      group=all_args.scenario_name,
-    #                      dir=str(run_dir),
-    #                      job_type="training",
-    #                      reinit=True)
+    if all_args.use_wandb:
+        # init wandb
+        run = wandb.init(project="MACFN_Project", name="Qmix")
+
     # else:
     #     if not run_dir.exists():
     #         curr_run = 'run1'

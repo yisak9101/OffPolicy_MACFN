@@ -87,7 +87,7 @@ def main(args):
         os.makedirs(str(run_dir))
 
     if all_args.use_wandb:
-        run = wandb.init(project="240527_MACFN",config=all_args, name="Qmix")
+        run = wandb.init(project="MACFN_Project",config=all_args, name="vdn")
         # init wandb
 #         run = wandb.init(config=all_args,
 #                         project=all_args.env_name,

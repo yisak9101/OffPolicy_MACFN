@@ -1,0 +1,728 @@
+double Q learning will be used
+warm up...
+warmup average episode rewards: -373.16888427734375
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 1000/10000000, FPS 769.
+average_episode_rewards is -372.07474
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 2000/10000000, FPS 794.
+average_episode_rewards is -379.22015
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 3000/10000000, FPS 800.
+average_episode_rewards is -381.5013
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 4000/10000000, FPS 765.
+average_episode_rewards is -383.90625
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 5000/10000000, FPS 732.
+average_episode_rewards is -384.2503
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 6000/10000000, FPS 712.
+average_episode_rewards is -378.96915
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 7000/10000000, FPS 695.
+average_episode_rewards is -370.8744
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 8000/10000000, FPS 682.
+average_episode_rewards is -391.34024
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 9000/10000000, FPS 671.
+average_episode_rewards is -370.99384
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 10000/10000000, FPS 661.
+average_episode_rewards is -381.44415
+eval_average_episode_rewards is -399.51147
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 11000/10000000, FPS 613.
+average_episode_rewards is -369.96945
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 12000/10000000, FPS 610.
+average_episode_rewards is -377.68283
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 13000/10000000, FPS 607.
+average_episode_rewards is -371.79437
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 14000/10000000, FPS 605.
+average_episode_rewards is -370.33316
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 15000/10000000, FPS 603.
+average_episode_rewards is -381.02094
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 16000/10000000, FPS 601.
+average_episode_rewards is -349.83063
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 17000/10000000, FPS 599.
+average_episode_rewards is -373.03046
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 18000/10000000, FPS 599.
+average_episode_rewards is -361.61807
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 19000/10000000, FPS 598.
+average_episode_rewards is -374.8251
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 20000/10000000, FPS 597.
+average_episode_rewards is -348.29413
+eval_average_episode_rewards is -376.70956
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 21000/10000000, FPS 578.
+average_episode_rewards is -348.95786
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 22000/10000000, FPS 578.
+average_episode_rewards is -365.50922
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 23000/10000000, FPS 578.
+average_episode_rewards is -347.97968
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 24000/10000000, FPS 577.
+average_episode_rewards is -364.95947
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 25000/10000000, FPS 577.
+average_episode_rewards is -365.50034
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 26000/10000000, FPS 577.
+average_episode_rewards is -345.64258
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 27000/10000000, FPS 577.
+average_episode_rewards is -379.1568
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 28000/10000000, FPS 576.
+average_episode_rewards is -366.5069
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 29000/10000000, FPS 576.
+average_episode_rewards is -369.6378
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 30000/10000000, FPS 576.
+average_episode_rewards is -357.91962
+eval_average_episode_rewards is -359.49225
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 31000/10000000, FPS 566.
+average_episode_rewards is -330.34247
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 32000/10000000, FPS 567.
+average_episode_rewards is -337.39142
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 33000/10000000, FPS 567.
+average_episode_rewards is -331.75073
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 34000/10000000, FPS 567.
+average_episode_rewards is -359.00336
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 35000/10000000, FPS 567.
+average_episode_rewards is -362.64175
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 36000/10000000, FPS 568.
+average_episode_rewards is -357.82343
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 37000/10000000, FPS 568.
+average_episode_rewards is -352.97107
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 38000/10000000, FPS 568.
+average_episode_rewards is -347.33188
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 39000/10000000, FPS 568.
+average_episode_rewards is -363.57666
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 40000/10000000, FPS 567.
+average_episode_rewards is -356.2812
+eval_average_episode_rewards is -367.48474
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 41000/10000000, FPS 559.
+average_episode_rewards is -341.0628
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 42000/10000000, FPS 560.
+average_episode_rewards is -373.0516
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 43000/10000000, FPS 560.
+average_episode_rewards is -313.7529
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 44000/10000000, FPS 560.
+average_episode_rewards is -350.42896
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 45000/10000000, FPS 560.
+average_episode_rewards is -361.10132
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 46000/10000000, FPS 559.
+average_episode_rewards is -328.80338
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 47000/10000000, FPS 560.
+average_episode_rewards is -352.0128
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 48000/10000000, FPS 560.
+average_episode_rewards is -333.479
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 49000/10000000, FPS 560.
+average_episode_rewards is -342.93408
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 50000/10000000, FPS 559.
+average_episode_rewards is -334.86978
+eval_average_episode_rewards is -347.85474
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 51000/10000000, FPS 553.
+average_episode_rewards is -352.74258
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 52000/10000000, FPS 553.
+average_episode_rewards is -361.25824
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 53000/10000000, FPS 553.
+average_episode_rewards is -345.14206
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 54000/10000000, FPS 553.
+average_episode_rewards is -349.9394
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 55000/10000000, FPS 553.
+average_episode_rewards is -341.3294
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 56000/10000000, FPS 553.
+average_episode_rewards is -369.17694
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 57000/10000000, FPS 553.
+average_episode_rewards is -333.90845
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 58000/10000000, FPS 553.
+average_episode_rewards is -347.01904
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 59000/10000000, FPS 554.
+average_episode_rewards is -376.0566
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 60000/10000000, FPS 554.
+average_episode_rewards is -346.88693
+eval_average_episode_rewards is -355.7302
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 61000/10000000, FPS 547.
+average_episode_rewards is -368.0414
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 62000/10000000, FPS 547.
+average_episode_rewards is -359.84613
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 63000/10000000, FPS 547.
+average_episode_rewards is -360.62643
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 64000/10000000, FPS 547.
+average_episode_rewards is -354.452
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 65000/10000000, FPS 547.
+average_episode_rewards is -372.28262
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 66000/10000000, FPS 547.
+average_episode_rewards is -354.9104
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 67000/10000000, FPS 547.
+average_episode_rewards is -333.9812
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 68000/10000000, FPS 546.
+average_episode_rewards is -361.7689
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 69000/10000000, FPS 546.
+average_episode_rewards is -330.61923
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 70000/10000000, FPS 547.
+average_episode_rewards is -366.6259
+eval_average_episode_rewards is -357.97284
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 71000/10000000, FPS 542.
+average_episode_rewards is -355.6293
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 72000/10000000, FPS 541.
+average_episode_rewards is -361.5954
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 73000/10000000, FPS 541.
+average_episode_rewards is -358.8268
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 74000/10000000, FPS 541.
+average_episode_rewards is -353.07812
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 75000/10000000, FPS 541.
+average_episode_rewards is -351.20593
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 76000/10000000, FPS 542.
+average_episode_rewards is -324.4821
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 77000/10000000, FPS 542.
+average_episode_rewards is -369.1006
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 78000/10000000, FPS 542.
+average_episode_rewards is -348.01672
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 79000/10000000, FPS 542.
+average_episode_rewards is -370.79074
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 80000/10000000, FPS 542.
+average_episode_rewards is -375.8126
+eval_average_episode_rewards is -349.77368
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 81000/10000000, FPS 538.
+average_episode_rewards is -332.48
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 82000/10000000, FPS 538.
+average_episode_rewards is -339.5448
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 83000/10000000, FPS 538.
+average_episode_rewards is -363.55338
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 84000/10000000, FPS 538.
+average_episode_rewards is -365.20563
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 85000/10000000, FPS 538.
+average_episode_rewards is -355.0572
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 86000/10000000, FPS 538.
+average_episode_rewards is -378.14276
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 87000/10000000, FPS 538.
+average_episode_rewards is -357.93765
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 88000/10000000, FPS 539.
+average_episode_rewards is -332.64868
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 89000/10000000, FPS 538.
+average_episode_rewards is -362.1394
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 90000/10000000, FPS 538.
+average_episode_rewards is -368.31958
+eval_average_episode_rewards is -363.78107
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 91000/10000000, FPS 534.
+average_episode_rewards is -361.32544
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 92000/10000000, FPS 534.
+average_episode_rewards is -343.7044
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 93000/10000000, FPS 534.
+average_episode_rewards is -353.58945
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 94000/10000000, FPS 534.
+average_episode_rewards is -348.031
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 95000/10000000, FPS 534.
+average_episode_rewards is -358.2281
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 96000/10000000, FPS 534.
+average_episode_rewards is -356.98062
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 97000/10000000, FPS 535.
+average_episode_rewards is -348.27948
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 98000/10000000, FPS 535.
+average_episode_rewards is -353.04565
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 99000/10000000, FPS 535.
+average_episode_rewards is -363.8207
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 100000/10000000, FPS 535.
+average_episode_rewards is -342.7884
+eval_average_episode_rewards is -359.6194
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 101000/10000000, FPS 532.
+average_episode_rewards is -343.59406
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 102000/10000000, FPS 532.
+average_episode_rewards is -343.1026
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 103000/10000000, FPS 532.
+average_episode_rewards is -362.2971
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 104000/10000000, FPS 532.
+average_episode_rewards is -337.5554
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 105000/10000000, FPS 532.
+average_episode_rewards is -347.5485
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 106000/10000000, FPS 532.
+average_episode_rewards is -357.5228
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 107000/10000000, FPS 532.
+average_episode_rewards is -354.56046
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 108000/10000000, FPS 532.
+average_episode_rewards is -349.32407
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 109000/10000000, FPS 532.
+average_episode_rewards is -351.11548
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 110000/10000000, FPS 532.
+average_episode_rewards is -350.40088
+eval_average_episode_rewards is -365.28253
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 111000/10000000, FPS 529.
+average_episode_rewards is -335.865
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 112000/10000000, FPS 529.
+average_episode_rewards is -356.79565
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 113000/10000000, FPS 529.
+average_episode_rewards is -347.48233
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 114000/10000000, FPS 529.
+average_episode_rewards is -329.90155
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 115000/10000000, FPS 528.
+average_episode_rewards is -347.64438
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 116000/10000000, FPS 529.
+average_episode_rewards is -357.13663
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 117000/10000000, FPS 528.
+average_episode_rewards is -370.3842
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 118000/10000000, FPS 528.
+average_episode_rewards is -352.84552
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 119000/10000000, FPS 528.
+average_episode_rewards is -350.61652
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 120000/10000000, FPS 528.
+average_episode_rewards is -361.90936
+eval_average_episode_rewards is -354.07047
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 121000/10000000, FPS 525.
+average_episode_rewards is -347.33267
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 122000/10000000, FPS 525.
+average_episode_rewards is -349.02075
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 123000/10000000, FPS 524.
+average_episode_rewards is -353.0945
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 124000/10000000, FPS 524.
+average_episode_rewards is -345.6276
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 125000/10000000, FPS 524.
+average_episode_rewards is -346.57336
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 126000/10000000, FPS 523.
+average_episode_rewards is -333.29303
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 127000/10000000, FPS 523.
+average_episode_rewards is -340.83734
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 128000/10000000, FPS 523.
+average_episode_rewards is -355.68134
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 129000/10000000, FPS 523.
+average_episode_rewards is -345.9545
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 130000/10000000, FPS 522.
+average_episode_rewards is -347.24072
+eval_average_episode_rewards is -361.99234
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 131000/10000000, FPS 520.
+average_episode_rewards is -357.96915
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 132000/10000000, FPS 520.
+average_episode_rewards is -368.9589
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 133000/10000000, FPS 520.
+average_episode_rewards is -345.66907
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 134000/10000000, FPS 520.
+average_episode_rewards is -351.1617
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 135000/10000000, FPS 520.
+average_episode_rewards is -358.62656
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 136000/10000000, FPS 520.
+average_episode_rewards is -363.9323
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 137000/10000000, FPS 520.
+average_episode_rewards is -343.3173
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 138000/10000000, FPS 520.
+average_episode_rewards is -334.93042
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 139000/10000000, FPS 520.
+average_episode_rewards is -367.40836
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 140000/10000000, FPS 520.
+average_episode_rewards is -348.38232
+eval_average_episode_rewards is -360.1799
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 141000/10000000, FPS 518.
+average_episode_rewards is -341.03436
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 142000/10000000, FPS 517.
+average_episode_rewards is -340.89423
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 143000/10000000, FPS 518.
+average_episode_rewards is -359.54126
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 144000/10000000, FPS 518.
+average_episode_rewards is -357.847
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 145000/10000000, FPS 518.
+average_episode_rewards is -350.34143
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 146000/10000000, FPS 518.
+average_episode_rewards is -379.55743
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 147000/10000000, FPS 518.
+average_episode_rewards is -352.13184
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 148000/10000000, FPS 518.
+average_episode_rewards is -347.1053
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 149000/10000000, FPS 518.
+average_episode_rewards is -355.7392
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 150000/10000000, FPS 517.
+average_episode_rewards is -351.29852
+eval_average_episode_rewards is -356.08948
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 151000/10000000, FPS 515.
+average_episode_rewards is -376.70563
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 152000/10000000, FPS 515.
+average_episode_rewards is -352.87427
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 153000/10000000, FPS 515.
+average_episode_rewards is -371.70752
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 154000/10000000, FPS 515.
+average_episode_rewards is -350.9514
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 155000/10000000, FPS 515.
+average_episode_rewards is -349.05426
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 156000/10000000, FPS 514.
+average_episode_rewards is -368.96634
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 157000/10000000, FPS 515.
+average_episode_rewards is -367.3773
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 158000/10000000, FPS 515.
+average_episode_rewards is -353.7649
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 159000/10000000, FPS 515.
+average_episode_rewards is -353.2832
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 160000/10000000, FPS 514.
+average_episode_rewards is -328.80298
+eval_average_episode_rewards is -352.65015
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 161000/10000000, FPS 513.
+average_episode_rewards is -361.0284
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 162000/10000000, FPS 513.
+average_episode_rewards is -358.1578
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 163000/10000000, FPS 513.
+average_episode_rewards is -346.96606
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 164000/10000000, FPS 512.
+average_episode_rewards is -352.47015
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 165000/10000000, FPS 513.
+average_episode_rewards is -354.906
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 166000/10000000, FPS 513.
+average_episode_rewards is -344.75797
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 167000/10000000, FPS 513.
+average_episode_rewards is -342.06827
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 168000/10000000, FPS 512.
+average_episode_rewards is -342.80463
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 169000/10000000, FPS 513.
+average_episode_rewards is -359.62143
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 170000/10000000, FPS 513.
+average_episode_rewards is -364.6032
+eval_average_episode_rewards is -359.7077
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 171000/10000000, FPS 511.
+average_episode_rewards is -359.94968
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 172000/10000000, FPS 511.
+average_episode_rewards is -329.80328
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 173000/10000000, FPS 511.
+average_episode_rewards is -355.13544
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 174000/10000000, FPS 511.
+average_episode_rewards is -356.58365
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 175000/10000000, FPS 511.
+average_episode_rewards is -360.10126
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 176000/10000000, FPS 511.
+average_episode_rewards is -326.58698
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 177000/10000000, FPS 511.
+average_episode_rewards is -352.0967
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 178000/10000000, FPS 511.
+average_episode_rewards is -352.36365
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 179000/10000000, FPS 511.
+average_episode_rewards is -363.59683
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 180000/10000000, FPS 511.
+average_episode_rewards is -339.25336
+eval_average_episode_rewards is -356.89252
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 181000/10000000, FPS 510.
+average_episode_rewards is -347.57074
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 182000/10000000, FPS 509.
+average_episode_rewards is -361.8231
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 183000/10000000, FPS 509.
+average_episode_rewards is -352.15503
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 184000/10000000, FPS 509.
+average_episode_rewards is -352.50668
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 185000/10000000, FPS 509.
+average_episode_rewards is -342.2094
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 186000/10000000, FPS 509.
+average_episode_rewards is -385.41525
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 187000/10000000, FPS 509.
+average_episode_rewards is -353.23105
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 188000/10000000, FPS 509.
+average_episode_rewards is -360.2592
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 189000/10000000, FPS 509.
+average_episode_rewards is -363.73096
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 190000/10000000, FPS 509.
+average_episode_rewards is -341.55777
+eval_average_episode_rewards is -335.5384
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 191000/10000000, FPS 507.
+average_episode_rewards is -356.2234
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 192000/10000000, FPS 507.
+average_episode_rewards is -364.19684
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 193000/10000000, FPS 507.
+average_episode_rewards is -361.76196
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 194000/10000000, FPS 507.
+average_episode_rewards is -360.6875
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 195000/10000000, FPS 507.
+average_episode_rewards is -359.04425
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 196000/10000000, FPS 507.
+average_episode_rewards is -356.72226
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 197000/10000000, FPS 507.
+average_episode_rewards is -361.77386
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 198000/10000000, FPS 508.
+average_episode_rewards is -361.17697
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 199000/10000000, FPS 507.
+average_episode_rewards is -366.2603
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 200000/10000000, FPS 507.
+average_episode_rewards is -359.9226
+eval_average_episode_rewards is -357.26648
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 201000/10000000, FPS 506.
+average_episode_rewards is -337.00986
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 202000/10000000, FPS 506.
+average_episode_rewards is -341.0671
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 203000/10000000, FPS 506.
+average_episode_rewards is -359.9532
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 204000/10000000, FPS 506.
+average_episode_rewards is -344.82626
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 205000/10000000, FPS 506.
+average_episode_rewards is -371.51987
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 206000/10000000, FPS 506.
+average_episode_rewards is -349.47488
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 207000/10000000, FPS 506.
+average_episode_rewards is -359.06976
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 208000/10000000, FPS 506.
+average_episode_rewards is -346.49762
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 209000/10000000, FPS 506.
+average_episode_rewards is -345.06918
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 210000/10000000, FPS 506.
+average_episode_rewards is -335.99884
+eval_average_episode_rewards is -353.02737
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 211000/10000000, FPS 504.
+average_episode_rewards is -338.70905
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 212000/10000000, FPS 504.
+average_episode_rewards is -347.8531
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 213000/10000000, FPS 504.
+average_episode_rewards is -365.3973
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 214000/10000000, FPS 505.
+average_episode_rewards is -364.06268
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 215000/10000000, FPS 505.
+average_episode_rewards is -345.9242
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 216000/10000000, FPS 505.
+average_episode_rewards is -337.8706
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 217000/10000000, FPS 505.
+average_episode_rewards is -363.08252
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 218000/10000000, FPS 505.
+average_episode_rewards is -331.4675
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 219000/10000000, FPS 505.
+average_episode_rewards is -357.85275
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 220000/10000000, FPS 505.
+average_episode_rewards is -348.2249
+eval_average_episode_rewards is -337.69135
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 221000/10000000, FPS 504.
+average_episode_rewards is -354.7987
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 222000/10000000, FPS 504.
+average_episode_rewards is -359.3952
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 223000/10000000, FPS 504.
+average_episode_rewards is -368.97525
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 224000/10000000, FPS 504.
+average_episode_rewards is -346.63065
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 225000/10000000, FPS 504.
+average_episode_rewards is -368.81207
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 226000/10000000, FPS 504.
+average_episode_rewards is -329.33118
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 227000/10000000, FPS 503.
+average_episode_rewards is -359.15445
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 228000/10000000, FPS 503.
+average_episode_rewards is -364.7824
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 229000/10000000, FPS 503.
+average_episode_rewards is -356.3797
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 230000/10000000, FPS 503.
+average_episode_rewards is -357.9856
+eval_average_episode_rewards is -365.0943
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 231000/10000000, FPS 502.
+average_episode_rewards is -360.75223
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 232000/10000000, FPS 502.
+average_episode_rewards is -353.57098
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 233000/10000000, FPS 502.
+average_episode_rewards is -354.31195
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 234000/10000000, FPS 502.
+average_episode_rewards is -353.684
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 235000/10000000, FPS 502.
+average_episode_rewards is -364.3316
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 236000/10000000, FPS 502.
+average_episode_rewards is -355.52206
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 237000/10000000, FPS 502.
+average_episode_rewards is -343.94977
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 238000/10000000, FPS 502.
+average_episode_rewards is -334.01178
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 239000/10000000, FPS 502.
+average_episode_rewards is -341.42297
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 240000/10000000, FPS 502.
+average_episode_rewards is -367.09882
+eval_average_episode_rewards is -338.41156
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 241000/10000000, FPS 501.
+average_episode_rewards is -361.86383
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 242000/10000000, FPS 501.
+average_episode_rewards is -357.57196
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 243000/10000000, FPS 501.
+average_episode_rewards is -362.5124
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 244000/10000000, FPS 501.
+average_episode_rewards is -362.9999
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 245000/10000000, FPS 501.
+average_episode_rewards is -344.72095
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 246000/10000000, FPS 501.
+average_episode_rewards is -365.83667
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 247000/10000000, FPS 500.
+average_episode_rewards is -368.5665
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 248000/10000000, FPS 500.
+average_episode_rewards is -344.05795
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 249000/10000000, FPS 500.
+average_episode_rewards is -384.60907
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 250000/10000000, FPS 500.
+average_episode_rewards is -357.64395
+eval_average_episode_rewards is -353.69232
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 251000/10000000, FPS 499.
+average_episode_rewards is -348.43933
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 252000/10000000, FPS 499.
+average_episode_rewards is -375.6635
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 253000/10000000, FPS 499.
+average_episode_rewards is -360.8324
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 254000/10000000, FPS 499.
+average_episode_rewards is -348.17188
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 255000/10000000, FPS 499.
+average_episode_rewards is -366.96115
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 256000/10000000, FPS 498.
+average_episode_rewards is -348.7286
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 257000/10000000, FPS 499.
+average_episode_rewards is -369.3623
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 258000/10000000, FPS 498.
+average_episode_rewards is -344.86053
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 259000/10000000, FPS 498.
+average_episode_rewards is -340.85797
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 260000/10000000, FPS 498.
+average_episode_rewards is -361.44452
+eval_average_episode_rewards is -346.0307
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 261000/10000000, FPS 498.
+average_episode_rewards is -343.3637
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 262000/10000000, FPS 498.
+average_episode_rewards is -354.8689
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 263000/10000000, FPS 498.
+average_episode_rewards is -359.6005
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 264000/10000000, FPS 498.
+average_episode_rewards is -366.6137
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 265000/10000000, FPS 498.
+average_episode_rewards is -370.98087
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 266000/10000000, FPS 498.
+average_episode_rewards is -372.53223
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 267000/10000000, FPS 497.
+average_episode_rewards is -345.83267
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 268000/10000000, FPS 497.
+average_episode_rewards is -361.1469
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 269000/10000000, FPS 497.
+average_episode_rewards is -351.02203
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 270000/10000000, FPS 497.
+average_episode_rewards is -351.69028
+eval_average_episode_rewards is -338.42487
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 271000/10000000, FPS 496.
+average_episode_rewards is -350.6818
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 272000/10000000, FPS 496.
+average_episode_rewards is -350.0638
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 273000/10000000, FPS 496.
+average_episode_rewards is -367.26025
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 274000/10000000, FPS 496.
+average_episode_rewards is -362.39627
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 275000/10000000, FPS 496.
+average_episode_rewards is -346.73087
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 276000/10000000, FPS 496.
+average_episode_rewards is -345.63055
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 277000/10000000, FPS 496.
+average_episode_rewards is -336.48978
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 278000/10000000, FPS 496.
+average_episode_rewards is -353.9362
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 279000/10000000, FPS 496.
+average_episode_rewards is -340.69684
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 280000/10000000, FPS 496.
+average_episode_rewards is -349.4471
+eval_average_episode_rewards is -348.64032
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 281000/10000000, FPS 495.
+average_episode_rewards is -337.93326
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 282000/10000000, FPS 496.
+average_episode_rewards is -370.32275
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 283000/10000000, FPS 496.
+average_episode_rewards is -354.82916
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 284000/10000000, FPS 496.
+average_episode_rewards is -371.1506
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 285000/10000000, FPS 495.
+average_episode_rewards is -349.45752
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 286000/10000000, FPS 495.
+average_episode_rewards is -346.86368
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 287000/10000000, FPS 495.
+average_episode_rewards is -370.42075
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 288000/10000000, FPS 495.
+average_episode_rewards is -354.21948
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 289000/10000000, FPS 495.
+average_episode_rewards is -339.16544
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 290000/10000000, FPS 495.
+average_episode_rewards is -376.0314
+eval_average_episode_rewards is -363.5102
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 291000/10000000, FPS 494.
+average_episode_rewards is -369.11075
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 292000/10000000, FPS 494.
+average_episode_rewards is -340.2124
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 293000/10000000, FPS 494.
+average_episode_rewards is -363.93878
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 294000/10000000, FPS 494.
+average_episode_rewards is -343.22162
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 295000/10000000, FPS 494.
+average_episode_rewards is -364.98618
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 296000/10000000, FPS 494.
+average_episode_rewards is -347.17346
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 297000/10000000, FPS 494.
+average_episode_rewards is -359.10434
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 298000/10000000, FPS 494.
+average_episode_rewards is -353.309
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 299000/10000000, FPS 494.
+average_episode_rewards is -347.3733
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 300000/10000000, FPS 494.
+average_episode_rewards is -343.92947
+eval_average_episode_rewards is -354.9187
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 301000/10000000, FPS 493.
+average_episode_rewards is -363.57294
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 302000/10000000, FPS 493.
+average_episode_rewards is -353.78094
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 303000/10000000, FPS 494.
+average_episode_rewards is -384.6544
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 304000/10000000, FPS 494.
+average_episode_rewards is -351.25833
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 305000/10000000, FPS 494.
+average_episode_rewards is -367.8175
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 306000/10000000, FPS 494.
+average_episode_rewards is -332.34344
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 307000/10000000, FPS 494.
+average_episode_rewards is -353.17758
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 308000/10000000, FPS 494.
+average_episode_rewards is -381.23383
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 309000/10000000, FPS 494.
+average_episode_rewards is -364.01013
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 310000/10000000, FPS 494.
+average_episode_rewards is -339.8814
+eval_average_episode_rewards is -366.84534
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 311000/10000000, FPS 493.
+average_episode_rewards is -346.8719
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 312000/10000000, FPS 493.
+average_episode_rewards is -361.22696
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 313000/10000000, FPS 493.
+average_episode_rewards is -374.6453
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 314000/10000000, FPS 493.
+average_episode_rewards is -361.89423
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 315000/10000000, FPS 493.
+average_episode_rewards is -348.6474
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 316000/10000000, FPS 493.
+average_episode_rewards is -372.94055
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 317000/10000000, FPS 493.
+average_episode_rewards is -351.2522
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 318000/10000000, FPS 493.
+average_episode_rewards is -318.46808
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 319000/10000000, FPS 493.
+average_episode_rewards is -350.04626
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 320000/10000000, FPS 493.
+average_episode_rewards is -344.44443
+eval_average_episode_rewards is -341.08038
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 321000/10000000, FPS 492.
+average_episode_rewards is -351.9746
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 322000/10000000, FPS 492.
+average_episode_rewards is -344.3666
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 323000/10000000, FPS 492.
+average_episode_rewards is -362.3551
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 324000/10000000, FPS 492.
+average_episode_rewards is -353.0655
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 325000/10000000, FPS 492.
+average_episode_rewards is -363.32193
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 326000/10000000, FPS 492.
+average_episode_rewards is -351.40778
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 327000/10000000, FPS 492.
+average_episode_rewards is -362.39963
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 328000/10000000, FPS 492.
+average_episode_rewards is -356.88843
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 329000/10000000, FPS 492.
+average_episode_rewards is -350.6976
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 330000/10000000, FPS 493.
+average_episode_rewards is -340.21695
+eval_average_episode_rewards is -374.1764
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 331000/10000000, FPS 492.
+average_episode_rewards is -340.7597
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 332000/10000000, FPS 492.
+average_episode_rewards is -354.0947
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 333000/10000000, FPS 492.
+average_episode_rewards is -359.0895
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 334000/10000000, FPS 492.
+average_episode_rewards is -359.80484
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 335000/10000000, FPS 492.
+average_episode_rewards is -348.15213
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 336000/10000000, FPS 492.
+average_episode_rewards is -348.24622
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 337000/10000000, FPS 492.
+average_episode_rewards is -337.9668
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 338000/10000000, FPS 492.
+average_episode_rewards is -335.09775
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 339000/10000000, FPS 492.
+average_episode_rewards is -352.7016
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 340000/10000000, FPS 492.
+average_episode_rewards is -361.82172
+eval_average_episode_rewards is -372.2455
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 341000/10000000, FPS 491.
+average_episode_rewards is -345.0105
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 342000/10000000, FPS 491.
+average_episode_rewards is -360.56122
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 343000/10000000, FPS 491.
+average_episode_rewards is -344.26044
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 344000/10000000, FPS 491.
+average_episode_rewards is -378.58582
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 345000/10000000, FPS 491.
+average_episode_rewards is -355.3039
+ Env simple_spread Algo vdn Exp debug runs total num timesteps 346000/10000000, FPS 491.

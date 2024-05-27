@@ -1,0 +1,8 @@
+double Q learning will be used
+warm up...
+warmup average episode rewards: -372.0066223144531
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 1000/10000000, FPS 706.
+average_episode_rewards is -365.67157
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 2000/10000000, FPS 737.
+average_episode_rewards is -379.559
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 3000/10000000, FPS 743.
