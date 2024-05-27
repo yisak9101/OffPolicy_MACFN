@@ -87,19 +87,19 @@ def main(args):
         os.makedirs(str(run_dir))
 
     if all_args.use_wandb:
-        #run = wandb.init(project="MACFN_Spread",config=all_args,dir=str(run_dir), name="Qmix")
+        run = wandb.init(project="240527_MACFN",config=all_args, name="Qmix")
         # init wandb
-        run = wandb.init(config=all_args,
-                        project=all_args.env_name,
-#                        entity=all_args.user_name,
-#                        notes=socket.gethostname(),
-                        name=str(all_args.algorithm_name) + "_" +
-                        str(all_args.experiment_name) +
-                        "_seed" + str(all_args.seed),
-#                        group=all_args.scenario_name,
-#                        dir=str(run_dir),
-#                        job_type="training",
-                        reinit=True)
+#         run = wandb.init(config=all_args,
+#                         project=all_args.env_name,
+# #                        entity=all_args.user_name,
+# #                        notes=socket.gethostname(),
+#                         name=str(all_args.algorithm_name) + "_" +
+#                         str(all_args.experiment_name) +
+#                         "_seed" + str(all_args.seed),
+# #                        group=all_args.scenario_name,
+# #                        dir=str(run_dir),
+# #                        job_type="training",
+#                         reinit=True)
 
     else:
         if not run_dir.exists():
