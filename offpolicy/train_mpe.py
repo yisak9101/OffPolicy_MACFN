@@ -11,6 +11,8 @@ from offpolicy.utils.util import get_cent_act_dim, get_dim_from_space
 from offpolicy.envs.mpe.MPE_Env import MPEEnv
 from offpolicy.envs.env_wrappers import DummyVecEnv, SubprocVecEnv
 
+wandb.init(project="MACFN_Project", name="Qmix")
+
 
 def make_train_env(all_args):
     def get_env_fn(rank):
