@@ -7,6 +7,7 @@ import torch
 import torch.nn as nn
 
 import torch.nn.functional as F
+import wandb
 import pickle
 from torch.distributions import Categorical
 from torch.utils.tensorboard import SummaryWriter
@@ -207,6 +208,7 @@ class CFN(object):
         network_loss = F.mse_loss(inflow, outflow, reduction='none')
         network_loss = torch.mean(torch.sum(network_loss, dim=1))
         print(network_loss)
+        wandb.log({'Network_loss': network_loss})
         self.network_optimizer.zero_grad()
         network_loss.backward()
         self.network_optimizer.step()
@@ -215,6 +217,7 @@ class CFN(object):
             pre_state = self.retrieval(next_obs, action)
             retrieval_loss = F.mse_loss(pre_state, obs)
             print(retrieval_loss)
+            wandb.log({'Retrieval_loss': retrieval_loss})
 
             # Optimize the network
             self.retrieval_optimizer.zero_grad()
@@ -244,6 +247,8 @@ def main():
     exp = "debug"
     seed = 1
     max_episode_steps = 25
+
+    wandb.init(project="MACFN_Project", name="MACFN_Spread_Vanila"  + now_time)
 
     args = [
         '--env_name', env,
@@ -288,13 +293,15 @@ def main():
     sample_flow_num = 99
     repeat_episode_num = 5
     sample_episode_num = 1000
+    num_env_steps = 1000000
+    num_step = 0
 
     writer = SummaryWriter(log_dir="runs/MACFN_Spread_" + now_time)
 
     policy = CFN(n_agents, obs_dim, action_dim, hidden_dim, min_action, max_action, uniform_action_size)
     # policy.retrieval.load_state_dict(torch.load('retrieval_spread.pkl'))
 
-    while frame_idx < max_frames:
+    while num_step < num_env_steps:
         observations = env.reset()
         episode_reward = 0
 
@@ -305,6 +312,7 @@ def main():
         not_done_buf = []
 
         for step in range(max_episode_steps):
+            num_step += 1
             with torch.no_grad():
                 actions = np.array([policy.select_action(observations[agent], 0) for agent in np.arange(n_agents)])
 
@@ -332,11 +340,14 @@ def main():
                 replay_buffer.push(obs_buf, action_buf, reward_buf, next_obs_buf, not_done_buf)
                 break
 
-            if frame_idx >= start_timesteps :
+            if frame_idx >= start_timesteps:
                 policy.train(replay_buffer, frame_idx, batch_size, max_episode_steps, sample_flow_num)
 
         episode_rewards.append(episode_reward)
         print(episode_reward)
+
+        if frame_idx >= start_timesteps:
+            wandb.log({"MACFN_Spread_episode_reward": episode_reward})
 
         # if frame_idx > start_timesteps and frame_idx % 25 == 0:
         #     print(frame_idx)
