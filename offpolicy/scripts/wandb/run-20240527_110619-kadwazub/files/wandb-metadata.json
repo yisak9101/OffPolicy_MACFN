@@ -1,0 +1,196 @@
+{
+    "os": "Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.17",
+    "python": "3.8.19",
+    "heartbeatAt": "2024-05-27T02:06:20.923848",
+    "startedAt": "2024-05-27T02:06:19.364769",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--env_name",
+        "MPE",
+        "--algorithm_name",
+        "qmix",
+        "--experiment_name",
+        "debug",
+        "--scenario_name",
+        "simple_spread",
+        "--num_agents",
+        "3",
+        "--num_landmarks",
+        "3",
+        "--seed",
+        "1",
+        "--episode_length",
+        "25",
+        "--batch_size",
+        "32",
+        "--tau",
+        "0.005",
+        "--lr",
+        "7e-4",
+        "--hard_update_interval_episode",
+        "100",
+        "--num_env_steps",
+        "10000000",
+        "--use_reward_normalization"
+    ],
+    "state": "running",
+    "program": "train/train_mpe.py",
+    "codePathLocal": "train/train_mpe.py",
+    "codePath": "offpolicy/scripts/train/train_mpe.py",
+    "git": {
+        "remote": "https://github.com/yisak9101/OffPolicy_MACFN.git",
+        "commit": "ae3a2d725418c267e6954d04cf34bc9f2b6a7cfe"
+    },
+    "email": "leekawon1995@naver.com",
+    "root": "/home/yumjunghyuk/01_Project/240512_DL_PJ/OffPolicy_MACFN",
+    "host": "yumjunghyuk-p03",
+    "username": "yumjunghyuk",
+    "executable": "/home/yumjunghyuk/anaconda3/envs/240525_marl2/bin/python",
+    "cpu_count": 12,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 2419.1979999999985,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2419.198,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1006.853931427002,
+            "used": 77.22867584228516
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 31.220333099365234
+    }
+}

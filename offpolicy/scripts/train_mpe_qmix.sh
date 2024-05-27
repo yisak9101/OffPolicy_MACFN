@@ -3,7 +3,7 @@ env="MPE"
 scenario="simple_spread"
 num_landmarks=3
 num_agents=3
-algo="qmix"
+algo="vdn"
 exp="debug"
 seed_max=1
 

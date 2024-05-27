@@ -1,0 +1,31 @@
+double Q learning will be used
+warm up...
+warmup average episode rewards: -372.0066223144531
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 1000/10000000, FPS 224.
+average_episode_rewards is -365.67157
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 2000/10000000, FPS 318.
+average_episode_rewards is -379.559
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 3000/10000000, FPS 370.
+average_episode_rewards is -383.14816
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 4000/10000000, FPS 404.
+average_episode_rewards is -387.3128
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 5000/10000000, FPS 426.
+average_episode_rewards is -391.15628
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 6000/10000000, FPS 443.
+average_episode_rewards is -378.57977
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 7000/10000000, FPS 455.
+average_episode_rewards is -385.24753
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 8000/10000000, FPS 465.
+average_episode_rewards is -398.06952
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 9000/10000000, FPS 474.
+average_episode_rewards is -381.82022
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 10000/10000000, FPS 481.
+average_episode_rewards is -386.6575
+eval_average_episode_rewards is -464.39478
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 11000/10000000, FPS 467.
+average_episode_rewards is -379.77985
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 12000/10000000, FPS 473.
+average_episode_rewards is -392.39017
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 13000/10000000, FPS 478.
+average_episode_rewards is -387.60822
+ Env simple_spread Algo qmix Exp debug runs total num timesteps 14000/10000000, FPS 482.
