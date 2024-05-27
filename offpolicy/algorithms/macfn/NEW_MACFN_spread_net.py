@@ -406,6 +406,7 @@ def main():
             print(f"Episode: {len(episode_rewards)}, Average Reward: {avg_reward}")
             episode_rewards = []
 
+
        # print(f"Episode Reward: {episode_reward}")
         # if frame_idx > start_timesteps and frame_idx % 25 == 0:
         #     print(frame_idx)

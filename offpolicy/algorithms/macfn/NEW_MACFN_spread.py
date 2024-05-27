@@ -330,6 +330,7 @@ def main():
             next_obs_buf.append(next_observations)
             not_done_buf.append(1 - done)
 
+
             observations = next_observations
             episode_reward += reward
 
