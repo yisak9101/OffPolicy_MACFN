@@ -3,3 +3,5 @@ venv
 offpolicy/scripts/results
 **/__pycache__
 offpolicy/algorithms/macfn/runs
+**/wandb
+*.egg-info
