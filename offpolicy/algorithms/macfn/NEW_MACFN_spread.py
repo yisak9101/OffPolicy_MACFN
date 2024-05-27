@@ -332,7 +332,7 @@ def main():
                 replay_buffer.push(obs_buf, action_buf, reward_buf, next_obs_buf, not_done_buf)
                 break
 
-            if frame_idx >= start_timesteps and step % 2 == 0:
+            if frame_idx >= start_timesteps :
                 policy.train(replay_buffer, frame_idx, batch_size, max_episode_steps, sample_flow_num)
 
         episode_rewards.append(episode_reward)
